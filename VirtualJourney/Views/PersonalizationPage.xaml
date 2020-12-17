@@ -3,11 +3,21 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VirtualJourney.Views.PersonalizationPage"
-             Title="Personalize Menu">
+             xmlns:vm="clr-namespace:VirtualJourney.ViewModels"
+             Title="{Binding Title}">
 
+    <ContentPage.BindingContext>
+        <vm:PersonalizationViewModel />
+    </ContentPage.BindingContext>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Black">White</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout BackgroundColor="{StaticResource Black}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <!--<Label Text="Moodle Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
@@ -82,7 +92,7 @@
                                            Drop="OnCorrectDrop" />
                     </Button.GestureRecognizers>
                 </Button>
-                <Button Grid.Row="1" Grid.Column="0"  Text="Click me 3">
+                <Button Grid.Row="1" Grid.Column="0" Background="icon_about.png" BackgroundColor="Transparent">
                     <Button.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
                     </Button.GestureRecognizers>

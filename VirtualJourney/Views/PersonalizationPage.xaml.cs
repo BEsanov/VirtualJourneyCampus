@@ -23,7 +23,7 @@ namespace VirtualJourney.Views
 
         async void OnCorrectDrop(object sender, DropEventArgs e)
         {
-            await DisplayAlert("Correct", "Congratulations!", "OK");
+            await DisplayAlert("Done", "Added to your favorites!", "OK");
         }
 
         void OnIncorrectDragOver(object sender, DragEventArgs e)
