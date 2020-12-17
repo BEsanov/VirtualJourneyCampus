@@ -11,6 +11,7 @@ namespace VirtualJourney
 
         public App()
         {
+            Device.SetFlags(new string[] { "DragAndDrop_Experimental", "Shapes_Experimental" });
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();

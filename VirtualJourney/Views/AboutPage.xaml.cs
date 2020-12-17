@@ -11,5 +11,11 @@ namespace VirtualJourney.Views
         {
             InitializeComponent();
         }
+
+
+        public async void PersonalizeButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PersonalizationPage());
+        }
     }
 }
