@@ -37,6 +37,7 @@ namespace VirtualJourney.Views
             selectableGrid.IsVisible = true;
             hideButton.IsVisible = true;
 
+
         }
         private void HideButton_Clicked(object sender, EventArgs e)
         {

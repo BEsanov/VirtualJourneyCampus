@@ -15,15 +15,15 @@
             <Color x:Key="Black">White</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource Black}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <!--<Label Text="Moodle Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
-            <Grid>
+            <Grid Margin="7,5,5,1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -32,26 +32,26 @@
                     <ColumnDefinition Width="34*"></ColumnDefinition>
                     <ColumnDefinition Width="33*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Favorites List" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"></Label>
-                <Button Grid.Row="1" Grid.Column="0"  Text="Favorites">
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="Black" Text="Favorites List" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"></Label>
+                <Button Grid.Row="1" Grid.Column="0"  Text="1">
                     <Button.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
                     </Button.GestureRecognizers>
                 </Button>
-                <Button Grid.Row="1" Grid.Column="1"  Text="Favorites">
+                <Button Grid.Row="1" Grid.Column="1"  Text="2">
                     <Button.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
                     </Button.GestureRecognizers>
                 </Button>
-                <Button Grid.Row="1" Grid.Column="2"  Text="Favorites">
+                <Button Grid.Row="1" Grid.Column="2"  Text="3">
                     <Button.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
                     </Button.GestureRecognizers>
                 </Button>
-                <Button Grid.Row="2" Grid.Column="1"  Text="Favorites">
+                <Button Grid.Row="2" Grid.Column="1"  Text="4">
                     <Button.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
@@ -59,71 +59,71 @@
                 </Button>
             </Grid>
             <ImageButton Source="settings.png" Clicked="ShowButton_Clicked" x:Name="showButton" HorizontalOptions="End"></ImageButton>
-            <Button Text="Hide" Clicked="HideButton_Clicked" x:Name="hideButton" IsVisible="false" WidthRequest="70"></Button>
+            <Button Text="Done" BackgroundColor="DarkGreen"
+                    Clicked="HideButton_Clicked" x:Name="hideButton" IsVisible="false" WidthRequest="70" HorizontalOptions="Center"></Button>
             <ScrollView>
-            <Grid x:Name="selectableGrid" IsVisible="false" BackgroundColor="LightGray">
+                <Grid x:Name="selectableGrid" IsVisible="false" BackgroundColor="LightGray">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="33*"></ColumnDefinition>
-                    <ColumnDefinition Width="34*"></ColumnDefinition>
-                    <ColumnDefinition Width="33*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0"  BackgroundColor="Silver"
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                        <ColumnDefinition Width="34*"></ColumnDefinition>
+                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0" Grid.Column="0"  BackgroundColor="Silver"
                    HeightRequest="300"
                    WidthRequest="250">
-                    <Image.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                        <TapGestureRecognizer Tapped="OnImageNameTapped"
+                        <Image.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                            <TapGestureRecognizer Tapped="OnImageNameTapped"
                             NumberOfTapsRequired="2" />
-
-                        <DropGestureRecognizer AllowDrop="True"
+                            <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
-                    </Image.GestureRecognizers>
-                </Image>
+                        </Image.GestureRecognizers>
+                    </Image>
 
-                <Button Grid.Row="0" Grid.Column="1" Text="Click me 2">
-                    <Button.GestureRecognizers>
-                        <DropGestureRecognizer AllowDrop="True"
+                    <Button Grid.Row="0" Grid.Column="1" Text="Click me 2">
+                        <Button.GestureRecognizers>
+                            <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="0" Background="icon_about.png" BackgroundColor="Transparent">
-                    <Button.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Image Grid.Row="1" Grid.Column="1" Source="icon_feed.png" >
-                    <Image.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                        <TapGestureRecognizer Tapped="OnImageNameTapped"
+                        </Button.GestureRecognizers>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="0" Background="icon_about.png" BackgroundColor="Transparent">
+                        <Button.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                    <Image Grid.Row="1" Grid.Column="1" Source="icon_feed.png" > 
+                        <Image.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                            <TapGestureRecognizer Tapped="OnImageNameTapped"
                             NumberOfTapsRequired="2" />
-                    </Image.GestureRecognizers>
-                </Image>
-                <Button Grid.Row="2" Grid.Column="0"  Text="Click me 5">
-                    <Button.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="2" Grid.Column="1"  Text="Click me 6">
-                    <Button.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="2" Grid.Column="2"  Text="Click me 5">
-                    <Button.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="3" Grid.Column="0"  Text="Click me 6">
-                    <Button.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="2" Grid.Column="0" Source="moodle.png">
+                        <Image.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Button Grid.Row="2" Grid.Column="1"  Text="Click me 6">
+                        <Button.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                    <Button Grid.Row="2" Grid.Column="2"  Text="Click me 5">
+                        <Button.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                    <Button Grid.Row="3" Grid.Column="0"  Text="Click me 6">
+                        <Button.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Button.GestureRecognizers>
+                    </Button>
                     <Image Grid.Row="3" Grid.Column="1" Source="home.png" >
                         <Image.GestureRecognizers>
                             <DragGestureRecognizer CanDrag="True"/>
@@ -131,16 +131,22 @@
                             NumberOfTapsRequired="2" />
                         </Image.GestureRecognizers>
                     </Image>
+                    <Button Grid.Row="4" Grid.Column="1"  Text="Click me 6">
+                        <Button.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                  
                     <!--Make Show and Hide section.
                 From there you can show the features and user can add their favorite features to the menu.-->
 
-                <!--Next thing check how to remove dragged Image/button-->
-
-
-
-
-            </Grid>
+                    <!--Next thing check how to remove dragged Image/button-->
+                </Grid>
+                
             </ScrollView>
+            <Button x:DataType="CheckBox" Text="Hello"></Button> 
+            <Button x:DataType="CheckBox" ></Button>
+            <Button x:DataType="CheckBox"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

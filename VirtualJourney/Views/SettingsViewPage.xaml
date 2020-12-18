@@ -13,7 +13,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Black">Black</Color>
+            <Color x:Key="Black">White</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -27,15 +27,8 @@
                 <SwitchCell x:Name="avsSwitch" AutomationId="avsSwitch" Text="Address Verification Service (AVS)" />
                 <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
                 <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout Orientation="Horizontal" Padding="16,0">
-                            <Label Text="Currency" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
-                            <Picker x:Name="currencyPicker" Title="Currency" VerticalOptions="Center" HorizontalOptions="End" />
-                        </StackLayout>
-                    </ViewCell.View>
-                </ViewCell>
 
+                
                
                 <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
                 <SwitchCell Text="Remid me meeting"></SwitchCell>
@@ -54,8 +47,32 @@
                 <SwitchCell Text="Open Location Based Services"></SwitchCell>
 
             </TableSection>
-         
-            
+            <TableSection Title="Campus Setings" TextColor="Bisque">
+                <TextCell Text="Choose your Campus" ></TextCell>
+                <ViewCell>
+               
+                    <StackLayout>
+                       
+
+                        <Picker x:Name="chooseCampus" FontSize="Medium">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Lahti</x:String>
+                                    <x:String>Lappeenranta</x:String>
+                                    <x:String>None</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Display and Themese">
+                <SwitchCell Text="Choose your theme"></SwitchCell>
+                
+            </TableSection>
+
+
         </TableRoot>
       
     </TableView>
