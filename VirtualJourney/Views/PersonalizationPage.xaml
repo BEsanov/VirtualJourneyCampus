@@ -22,7 +22,6 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
             <Grid>
-
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
@@ -59,9 +58,10 @@
                     </Button.GestureRecognizers>
                 </Button>
             </Grid>
-            <Button Text="Show Grid" Clicked="ShowButton_Clicked" x:Name="showButton"></Button>
-            <Button Text="Hide Grid" Clicked="HideButton_Clicked"></Button>
-            <Grid x:Name="selectableGrid" IsVisible="false">
+            <ImageButton Source="settings.png" Clicked="ShowButton_Clicked" x:Name="showButton" HorizontalOptions="End"></ImageButton>
+            <Button Text="Hide" Clicked="HideButton_Clicked" x:Name="hideButton" IsVisible="false" WidthRequest="70"></Button>
+            <ScrollView>
+            <Grid x:Name="selectableGrid" IsVisible="false" BackgroundColor="LightGray">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"></RowDefinition>
@@ -114,7 +114,24 @@
                         <DragGestureRecognizer CanDrag="True"/>
                     </Button.GestureRecognizers>
                 </Button>
-                <!--Make Show and Hide section.
+                <Button Grid.Row="2" Grid.Column="2"  Text="Click me 5">
+                    <Button.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True"/>
+                    </Button.GestureRecognizers>
+                </Button>
+                <Button Grid.Row="3" Grid.Column="0"  Text="Click me 6">
+                    <Button.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True"/>
+                    </Button.GestureRecognizers>
+                </Button>
+                    <Image Grid.Row="3" Grid.Column="1" Source="home.png" >
+                        <Image.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                            <TapGestureRecognizer Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="2" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <!--Make Show and Hide section.
                 From there you can show the features and user can add their favorite features to the menu.-->
 
                 <!--Next thing check how to remove dragged Image/button-->
@@ -123,7 +140,7 @@
 
 
             </Grid>
-
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

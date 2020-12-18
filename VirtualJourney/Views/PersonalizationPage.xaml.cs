@@ -33,19 +33,14 @@ namespace VirtualJourney.Views
 
         private void ShowButton_Clicked(object sender, EventArgs e)
         {
-            if (selectableGrid.IsVisible = true)
-            {
-                showButton.Text = "Hide the Grid";
-            }
-            else
-            {
-                selectableGrid.IsVisible = false;
-                showButton.Text = "Show the Grid";
-            }
+
+            selectableGrid.IsVisible = true;
+            hideButton.IsVisible = true;
 
         }
         private void HideButton_Clicked(object sender, EventArgs e)
         {
+            hideButton.IsVisible = false;
             selectableGrid.IsVisible = false;
         }
         //This method is unknown for now

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VirtualJourney.Views.SettingsViewPage"
+             xmlns:vm="clr-namespace:VirtualJourney.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Black">Black</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+ 
+    <TableView Intent="Settings" BackgroundColor="Black">
+        <TableRoot TextColor="Aqua">
+            <TableSection Title="App Setiings" TextColor="Bisque">
+                
+                <SwitchCell OnColor="Red" x:Name="locationBasedService" Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell Text="Choose your campus"></SwitchCell>
+                <SwitchCell x:Name="avsSwitch" AutomationId="avsSwitch" Text="Address Verification Service (AVS)" />
+                <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
+                <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal" Padding="16,0">
+                            <Label Text="Currency" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Picker x:Name="currencyPicker" Title="Currency" VerticalOptions="Center" HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+
+               
+                <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
+                <SwitchCell Text="Remid me meeting"></SwitchCell>
+                <SwitchCell OnColor="Red" Text="Remid me exam"></SwitchCell>
+                <SwitchCell Text="Notification enable disable"></SwitchCell>
+
+
+                <SwitchCell OnColor="Red"  Text="Allow us to use cookies anonymously"></SwitchCell>
+                <SwitchCell Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell OnColor="Red" Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell Text="Open Location Based Services"></SwitchCell>
+
+                <SwitchCell OnColor="Red"  Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell OnColor="Red" Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell Text="Open Location Based Services"></SwitchCell>
+
+            </TableSection>
+         
+            
+        </TableRoot>
+      
+    </TableView>
+    
+</ContentPage>

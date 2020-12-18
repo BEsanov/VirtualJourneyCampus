@@ -95,7 +95,7 @@
             <Grid BackgroundColor="Black"
                   HeightRequest="200">
                 <Image Aspect="AspectFill" 
-                       Source="xamarin_logo.png" 
+                       Source="lut_logo.png" 
                        Opacity="0.6" />
                 <Label Text="LUT Mobile" 
                        TextColor="White" 
@@ -116,6 +116,11 @@
     <!--Personalizaion Page Navigation-->
     <FlyoutItem Title="Personalizaion" Icon="home.png">
         <ShellContent Route="PersonalizationPage" ContentTemplate="{DataTemplate local:PersonalizationPage}" />
+    </FlyoutItem>
+    
+    <!--Settings Page for preferences-->
+    <FlyoutItem Title="App Settings" Icon="app_settings.png">
+        <ShellContent Route="SettingsViewPage" ContentTemplate="{DataTemplate local:SettingsViewPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
