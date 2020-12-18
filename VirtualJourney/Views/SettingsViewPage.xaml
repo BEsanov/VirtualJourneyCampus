@@ -12,24 +12,24 @@
 
 
     <ContentPage.Resources>
+        
         <ResourceDictionary>
-            <Color x:Key="Black">White</Color>
+            <Color x:Key="Black">Black</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
- 
-    <TableView Intent="Settings" BackgroundColor="Black">
+    <TableView Intent="Settings" >
         <TableRoot TextColor="Aqua">
             <TableSection Title="App Setiings" TextColor="Bisque">
-                
+
                 <SwitchCell OnColor="Red" x:Name="locationBasedService" Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell Text="Choose your campus"></SwitchCell>
                 <SwitchCell x:Name="avsSwitch" AutomationId="avsSwitch" Text="Address Verification Service (AVS)" />
                 <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
                 <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
 
-                
-               
+
+
                 <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
                 <SwitchCell Text="Remid me meeting"></SwitchCell>
                 <SwitchCell OnColor="Red" Text="Remid me exam"></SwitchCell>
@@ -48,13 +48,9 @@
 
             </TableSection>
             <TableSection Title="Campus Setings" TextColor="Bisque">
-                <TextCell Text="Choose your Campus" ></TextCell>
-                <ViewCell>
-               
+               <ViewCell>
                     <StackLayout>
-                       
-
-                        <Picker x:Name="chooseCampus" FontSize="Medium">
+                        <Picker x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>Lahti</x:String>
@@ -69,12 +65,12 @@
             </TableSection>
             <TableSection Title="Display and Themese">
                 <SwitchCell Text="Choose your theme"></SwitchCell>
-                
+
             </TableSection>
 
 
         </TableRoot>
-      
+
     </TableView>
-    
+
 </ContentPage>
