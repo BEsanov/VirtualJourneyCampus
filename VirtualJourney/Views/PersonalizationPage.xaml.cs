@@ -56,5 +56,10 @@ namespace VirtualJourney.Views
             await showButton.RotateTo(360, 1000);
             showButton.Rotation = 0;
         }
+
+        private async void sisuLogo_Clicked(object sender, EventArgs e)
+        {
+          await sisuLogo.Navigation.PushAsync(new Pages.SisuPage());
+        }
     }
 }
