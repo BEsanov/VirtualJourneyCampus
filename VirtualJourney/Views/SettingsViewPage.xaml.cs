@@ -21,7 +21,7 @@ namespace VirtualJourney.Views
 
         private void pickerCampus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pickerCampus.SelectedIndex = Color.Red;
+            //pickerCampus.SelectedIndex = Color.Red;
         }
     }
 }

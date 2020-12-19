@@ -59,7 +59,6 @@
                                 </x:Array>
                             </Picker.ItemsSource>
                         </Picker>
-
                     </StackLayout>
                 </ViewCell>
             </TableSection>

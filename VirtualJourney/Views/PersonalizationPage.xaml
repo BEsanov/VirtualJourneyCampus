@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VirtualJourney.Views.PersonalizationPage"
              xmlns:vm="clr-namespace:VirtualJourney.ViewModels"
+             BackgroundColor="Brown"
              Title="{Binding Title}">
 
     <ContentPage.BindingContext>
@@ -21,11 +22,13 @@
             <!--<Label Text="Moodle Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
-            <Grid Margin="7,5,5,1">
+            <Grid Margin="7,5,5,1" BackgroundColor="Aqua">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="33*"></ColumnDefinition>
@@ -33,34 +36,85 @@
                     <ColumnDefinition Width="33*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="Black" Text="Favorites List" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"></Label>
-                <Button Grid.Row="1" Grid.Column="0"  Text="1">
-                    <Button.GestureRecognizers>
+                <Image Grid.Row="1" Grid.Column="0" Source="ltky_logo.png" >
+                    <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="1"  Text="2">
-                    <Button.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="1"  Source="moodle_logo.png" WidthRequest="64">
+                    <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="2"  Text="3">
-                    <Button.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="2" Source="library.png">
+                    <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="2" Grid.Column="1"  Text="4">
-                    <Button.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="0"  Source="SISU.png" >
+                    <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
-                    </Button.GestureRecognizers>
-                </Button>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="1"  Source="TimeEdit.png">
+                    <Image.GestureRecognizers>
+                        <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                    </Image.GestureRecognizers>
+                </Image>
+                
+                
+                <!--Extra Image-->
+                <Image Grid.Row="2" Grid.Column="2" Source="ltky_logo.png" >
+                    <Image.GestureRecognizers>
+                        <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="0"  Source="moodle_logo.png" WidthRequest="64">
+                    <Image.GestureRecognizers>
+                        <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="1" Source="library.png">
+                    <Image.GestureRecognizers>
+                        <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="2"  Source="SISU.png" >
+                    <Image.GestureRecognizers>
+                        <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="4" Grid.Column="1"  Source="TimeEdit.png">
+                    <Image.GestureRecognizers>
+                        <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+
+
+
+
+
+
+
+
+
+
             </Grid>
             <ImageButton Source="settings.png" Clicked="ShowButton_Clicked" x:Name="showButton" HorizontalOptions="End"></ImageButton>
             <Button Text="Done" BackgroundColor="DarkGreen"
-                    Clicked="HideButton_Clicked" x:Name="hideButton" IsVisible="false" WidthRequest="70" HorizontalOptions="Center"></Button>
+                    Clicked="HideButton_Clicked" x:Name="hideButton" IsVisible="false" HorizontalOptions="Center" FontSize="Micro"></Button>
             <ScrollView>
                 <Grid x:Name="selectableGrid" IsVisible="false" BackgroundColor="LightGray">
 
@@ -144,9 +198,6 @@
                 </Grid>
                 
             </ScrollView>
-            <Button x:DataType="CheckBox" Text="Hello"></Button> 
-            <Button x:DataType="CheckBox" ></Button>
-            <Button x:DataType="CheckBox"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

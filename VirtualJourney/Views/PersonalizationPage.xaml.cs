@@ -33,7 +33,9 @@ namespace VirtualJourney.Views
 
         private void ShowButton_Clicked(object sender, EventArgs e)
         {
-
+            RotateSettingicon();
+            //showButton.RotateTo(360, 1000);
+            //showButton.Rotation = 0;
             selectableGrid.IsVisible = true;
             hideButton.IsVisible = true;
 
@@ -49,5 +51,10 @@ namespace VirtualJourney.Views
         //{
         //    e.AcceptedOperation = DataPackageOperation.None;
         //}
+        private async void RotateSettingicon()
+        {
+            await showButton.RotateTo(360, 1000);
+            showButton.Rotation = 0;
+        }
     }
 }
