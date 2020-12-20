@@ -20,10 +20,29 @@
 
     <TableView Intent="Settings" >
         <TableRoot TextColor="Aqua">
+            <TableSection Title="Campus Setings" TextColor="Bisque">
+                <ViewCell>
+                    <StackLayout>
+                        <Picker x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Lahti</x:String>
+                                    <x:String>Lappeenranta</x:String>
+                                    <x:String>None</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Button x:Name="vibrationButton" Clicked="vibrationButton_Clicked" Text="Vibration is Off"></Button>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+
+
+ 
             <TableSection Title="App Setiings" TextColor="Bisque">
 
                 <SwitchCell OnColor="Red" x:Name="locationBasedService" Text="Open Location Based Services"></SwitchCell>
-                <SwitchCell Text="Choose your campus"></SwitchCell>
+                <SwitchCell Text="Night Mode" x:Name="nightMode" OnChanged="nightMode_OnChanged" ></SwitchCell>
                 <SwitchCell x:Name="avsSwitch" AutomationId="avsSwitch" Text="Address Verification Service (AVS)" />
                 <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
                 <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
@@ -47,22 +66,7 @@
                 <SwitchCell x:Name="silentMode" Text="Open Location Based Services 1234" On="True" OnChanged="silentMode_OnChanged"></SwitchCell>
 
             </TableSection>
-            <TableSection Title="Campus Setings" TextColor="Bisque">
-               <ViewCell>
-                    <StackLayout>
-                        <Picker x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Lahti</x:String>
-                                    <x:String>Lappeenranta</x:String>
-                                    <x:String>None</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                        <Button x:Name="vibrationButton" Clicked="vibrationButton_Clicked" Text="Vibration is Off"></Button>
-                    </StackLayout>
-                </ViewCell>
-            </TableSection>
+
             <TableSection Title="Display and Themese">
                 <SwitchCell Text="Choose your theme"></SwitchCell>
               

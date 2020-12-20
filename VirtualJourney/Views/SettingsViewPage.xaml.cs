@@ -15,6 +15,8 @@ namespace VirtualJourney.Views
         
         public SettingsViewPage()
         {
+
+
             InitializeComponent();
             
         }
@@ -35,6 +37,17 @@ namespace VirtualJourney.Views
             //silentMode.OnColor = Color.DarkGreen;
      
             
+        }
+
+        private void nightMode_OnChanged(object sender, ToggledEventArgs e)
+        {
+    
+                BackgroundColor = Color.LightGray;
+        
+
+            
+
+
         }
     }
 }
