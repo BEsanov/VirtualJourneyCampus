@@ -28,7 +28,7 @@
                 <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
                 <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
 
-
+           
 
                 <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
                 <SwitchCell Text="Remid me meeting"></SwitchCell>
@@ -44,7 +44,7 @@
                 <SwitchCell OnColor="Red"  Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell OnColor="Red" Text="Open Location Based Services"></SwitchCell>
-                <SwitchCell Text="Open Location Based Services"></SwitchCell>
+                <SwitchCell x:Name="silentMode" Text="Open Location Based Services 1234" On="True" OnChanged="silentMode_OnChanged"></SwitchCell>
 
             </TableSection>
             <TableSection Title="Campus Setings" TextColor="Bisque">
@@ -59,17 +59,22 @@
                                 </x:Array>
                             </Picker.ItemsSource>
                         </Picker>
+                        <Button x:Name="vibrationButton" Clicked="vibrationButton_Clicked" Text="Vibration is Off"></Button>
                     </StackLayout>
                 </ViewCell>
             </TableSection>
             <TableSection Title="Display and Themese">
                 <SwitchCell Text="Choose your theme"></SwitchCell>
-
+              
             </TableSection>
 
-
+            <TableSection Title="Vibrate">
+                
+               
+            </TableSection>
         </TableRoot>
 
     </TableView>
 
+ 
 </ContentPage>

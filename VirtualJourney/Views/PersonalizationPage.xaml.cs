@@ -38,8 +38,6 @@ namespace VirtualJourney.Views
             //showButton.Rotation = 0;
             selectableGrid.IsVisible = true;
             hideButton.IsVisible = true;
-
-
         }
         private void HideButton_Clicked(object sender, EventArgs e)
         {
@@ -53,7 +51,7 @@ namespace VirtualJourney.Views
         //}
         private async void RotateSettingicon()
         {
-            await showButton.RotateTo(360, 1000);
+            await showButton.RotateTo(360, 500);
             showButton.Rotation = 0;
         }
 
