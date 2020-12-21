@@ -38,10 +38,6 @@
                         <Button x:Name="vibrationButton" Clicked="vibrationButton_Clicked" Text="Vibration is Off"></Button>
                     </StackLayout>
                 </ViewCell>
-
-
-
-
             </TableSection>
 
             <TableSection Title="Themes and Appearance">
