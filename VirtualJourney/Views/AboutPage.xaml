@@ -28,16 +28,16 @@
                 </ContentView>
             </StackLayout>
         </StackLayout>
-        <ScrollView Grid.Row="1" BackgroundColor="Gold">
+        <ScrollView Grid.Row="1" BackgroundColor="WhiteSmoke">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                 <Label Text="LUT Mobile" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="Make difference in your mobile app. Please, test it!" FontSize="16" Padding="0,0,0,0"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Personalize Your App "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                                <Span Text="For more Information: Ajantha.Dahanayake@lut.fi and Bakhtiyor.Esanov@lut.fi" FontAttributes="Bold"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>

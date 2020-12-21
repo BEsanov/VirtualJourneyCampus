@@ -135,7 +135,7 @@
                         <DragGestureRecognizer CanDrag="True"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Hello"></Label>
+               
                 <Image Grid.Row="0" Grid.Column="2" Source="icon_about.png">
                     <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>

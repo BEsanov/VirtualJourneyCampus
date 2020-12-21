@@ -12,7 +12,7 @@
 
 
     <ContentPage.Resources>
-        
+
         <ResourceDictionary>
             <Color x:Key="Black">Black</Color>
         </ResourceDictionary>
@@ -20,21 +20,12 @@
 
     <TableView Intent="Settings" >
         <TableRoot TextColor="Aqua">
-            <TableSection Title="Campus Setings" TextColor="Bisque">
+            <TableSection Title="Campus Setings">
                 <ViewCell>
                     <StackLayout>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="150" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="90"/>
-                            </Grid.RowDefinitions>
-                       
+
                         <!--<Image Grid.Column="0" Grid.Row="0" Source="shop.png" />-->
-                            <Picker Grid.Column="0" Grid.Row="0" x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Picker x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>Lahti</x:String>
@@ -43,48 +34,36 @@
                                 </x:Array>
                             </Picker.ItemsSource>
                         </Picker>
-                        </Grid>
+
                         <Button x:Name="vibrationButton" Clicked="vibrationButton_Clicked" Text="Vibration is Off"></Button>
                     </StackLayout>
                 </ViewCell>
 
 
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="library.png" />
-                        <Label Text="left"
-                                 TextColor="#f35e20" />
-                        <Label Text="right fdgsdfgjkl sfdkghjlkfhdsgsdf"
-                               FontSize="Medium"
-                                 HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand"
-                                 TextColor="#503026" />
-                    </StackLayout>
-                </ViewCell>
-
 
 
             </TableSection>
 
-
- 
-            <TableSection Title="App Setiings" TextColor="Bisque">
-
-                <SwitchCell OnColor="Red" x:Name="locationBasedService" Text="Open Location Based Services"></SwitchCell>
+            <TableSection Title="Themes and Appearance">
                 <SwitchCell Text="Night Mode" x:Name="nightMode" OnChanged="nightMode_OnChanged" ></SwitchCell>
-                <SwitchCell x:Name="avsSwitch" AutomationId="avsSwitch" Text="Address Verification Service (AVS)" />
-                <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
-                <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
+                <SwitchCell Text="Choose your theme"></SwitchCell>
 
-              
-           
 
+            </TableSection>
+            <TableSection Title="Notifications">
+                <SwitchCell  Text="Close All Notifications" />
+                <SwitchCell  Text="Disable course notifications" />
+                <SwitchCell Text="Disable only selected notifications." />
+            </TableSection>
+
+            <TableSection Title="Reminders">
                 <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
                 <SwitchCell Text="Remid me meeting"></SwitchCell>
                 <SwitchCell OnColor="Red" Text="Remid me exam"></SwitchCell>
-                <SwitchCell Text="Notification enable disable"></SwitchCell>
-
-
+            </TableSection>
+            <TableSection Title="Services">
+                <SwitchCell x:Name="silentMode" Text="Silent Mode" On="True" OnChanged="silentMode_OnChanged"></SwitchCell>
+                <SwitchCell OnColor="Red" x:Name="locationBasedService" Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell OnColor="Red"  Text="Allow us to use cookies anonymously"></SwitchCell>
                 <SwitchCell Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell OnColor="Red" Text="Open Location Based Services"></SwitchCell>
@@ -93,22 +72,22 @@
                 <SwitchCell OnColor="Red"  Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell Text="Open Location Based Services"></SwitchCell>
                 <SwitchCell OnColor="Red" Text="Open Location Based Services"></SwitchCell>
-                <SwitchCell x:Name="silentMode" Text="Open Location Based Services 1234" On="True" OnChanged="silentMode_OnChanged"></SwitchCell>
+
 
             </TableSection>
 
             <TableSection Title="Display and Themese">
-                <SwitchCell Text="Choose your theme"></SwitchCell>
-              
+
+
             </TableSection>
 
-            <TableSection Title="Vibrate">
-                
-               
+            <TableSection Title="Vibration">
+
+
             </TableSection>
         </TableRoot>
 
     </TableView>
 
- 
+
 </ContentPage>

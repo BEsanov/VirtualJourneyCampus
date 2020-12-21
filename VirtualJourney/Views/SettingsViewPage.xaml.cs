@@ -12,13 +12,13 @@ namespace VirtualJourney.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsViewPage : ContentPage
     {
-        
+
         public SettingsViewPage()
         {
 
 
             InitializeComponent();
-            
+
         }
 
         private void pickerCampus_SelectedIndexChanged(object sender, EventArgs e)
@@ -28,26 +28,21 @@ namespace VirtualJourney.Views
 
         private void vibrationButton_Clicked(object sender, EventArgs e)
         {
-            
+
         }
 
         private void silentMode_OnChanged(object sender, ToggledEventArgs e)
         {
-           Vibration.Vibrate();
+            Vibration.Vibrate();
             //silentMode.OnColor = Color.DarkGreen;
-     
-            
+
+
         }
 
         private void nightMode_OnChanged(object sender, ToggledEventArgs e)
         {
-    
-                BackgroundColor = Color.LightGray;
-        
 
-            
-
-
+            BackgroundColor = Color.LightGray;
         }
     }
 }
