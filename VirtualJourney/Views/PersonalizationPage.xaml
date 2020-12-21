@@ -22,13 +22,19 @@
             <!--<Label Text="Moodle Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
+
+            <SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Search ..."       />
+            
             <Grid Margin="7,5,5,1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="55"></RowDefinition>
                     <RowDefinition Height="55"></RowDefinition>
                     <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
+                    <!--<RowDefinition Height="55"></RowDefinition>-->
                   
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -43,7 +49,7 @@
                                            Drop="OnCorrectDrop" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Grid.Row="1" Grid.Column="1"  Source="moodle_logo.png" WidthRequest="64">
+                <Image Grid.Row="1" Grid.Column="1"  Source="dining.png" WidthRequest="64">
                     <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
@@ -70,13 +76,13 @@
                 
                 
                 <!--Extra Image-->
-                <Image Grid.Row="2" Grid.Column="2" Source="ltky_logo.png" >
+                <Image Grid.Row="2" Grid.Column="2" Source="shop.png" >
                     <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Grid.Row="3" Grid.Column="0"  Source="moodle_logo.png" WidthRequest="64">
+                <Image Grid.Row="3" Grid.Column="0"  Source="events.png">
                     <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
@@ -88,18 +94,18 @@
                                            Drop="OnCorrectDrop" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Grid.Row="3" Grid.Column="2"  Source="SISU.png" >
+                <Image Grid.Row="3" Grid.Column="2"  Source="departure.png" >
                     <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Grid.Row="4" Grid.Column="1"  Source="TimeEdit.png">
+                <!--<Image Grid.Row="4" Grid.Column="1"  Source="TimeEdit.png">
                     <Image.GestureRecognizers>
                         <DropGestureRecognizer AllowDrop="True"
                                            Drop="OnCorrectDrop" />
                     </Image.GestureRecognizers>
-                </Image>
+                </Image>-->
 
             </Grid>
             <ImageButton Source="settings.png" Clicked="ShowButton_Clicked" x:Name="showButton" HorizontalOptions="End"></ImageButton>
@@ -147,11 +153,7 @@
                             NumberOfTapsRequired="2" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Grid.Row="0" Grid.Column="5" Source="moodle.png">
-                    <Image.GestureRecognizers>
-                        <DragGestureRecognizer CanDrag="True"/>
-                    </Image.GestureRecognizers>
-                </Image>
+
                 <Button Grid.Row="1" Grid.Column="0"  Text="Click me 6">
                     <Button.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
@@ -167,19 +169,25 @@
                         <DragGestureRecognizer CanDrag="True"/>
                     </Button.GestureRecognizers>
                 </Button>
-                <ImageButton Grid.Row="1" Grid.Column="3" Source="SISU.png" x:Name="sisuLogo" Clicked="sisuLogo_Clicked" >
-                    <ImageButton.GestureRecognizers>
+                <Image Grid.Row="1" Grid.Column="3" Source="SISU.png" x:Name="sisuLogo">
+                    <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
                         <TapGestureRecognizer Tapped="OnImageNameTapped"
                             NumberOfTapsRequired="2" />
-                    </ImageButton.GestureRecognizers>
-                </ImageButton>
-                <Button Grid.Row="1" Grid.Column="4"  Text="Click me 6">
+                        
+                    </Image.GestureRecognizers>
+             
+                </Image>
+                <Button Grid.Row="2" Grid.Column="0"  Text="Click me 6">
                     <Button.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
                     </Button.GestureRecognizers>
                 </Button>
-
+                <Image Grid.Row="2" Grid.Column="1" Source="moodle.png">
+                    <Image.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True"/>
+                    </Image.GestureRecognizers>
+                </Image>
                 
 
                 <!--Make Show and Hide section.
@@ -188,6 +196,30 @@
                 <!--Next thing check how to remove dragged Image/button-->
             </Grid>
 
+
+            <ScrollView>
+            <Grid Margin="5,5,5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="6*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="https://www.lut.fi/documents/10633/162486/tule-meille-toihin-sisaltokuva-615x295.jpg.jpg"></Image>
+                    <Label Grid.Row="0" Grid.Column="1" FontSize="Small" Text="We support working together in all our activities. Our management is based on values by which we operate in a financially responsible and fair manner"></Label>
+
+                    <Image Grid.Row="1" Grid.Column="0" Source="https://www.lut.fi/documents/10633/86670/headerkuva-etusivu-lut-syksy-1400x654.jpg"></Image>
+                    <Label Grid.Row="1" Grid.Column="1" FontSize="Small" Text="Clean energy, water and air are life-giving resources for which we at LUT University seek new solutions with our expertise in technology and."></Label>
+
+                    <Image Grid.Row="2" Grid.Column="0" Source="https://www.lut.fi/documents/10633/162486/system-earth-618x618.jpg"></Image>
+                    <Label Grid.Row="2" Grid.Column="1" FontSize="Small" Text="Air – Turning emissions into opportunities. Defining air quality, emissions and climate impacts"></Label>
+             
+            </Grid>
+            </ScrollView>
             <ScrollView>
             
                 

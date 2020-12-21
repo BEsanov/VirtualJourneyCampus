@@ -23,7 +23,18 @@
             <TableSection Title="Campus Setings" TextColor="Bisque">
                 <ViewCell>
                     <StackLayout>
-                        <Picker x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="150" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="90"/>
+                            </Grid.RowDefinitions>
+                       
+                        <!--<Image Grid.Column="0" Grid.Row="0" Source="shop.png" />-->
+                            <Picker Grid.Column="0" Grid.Row="0" x:Name="pickerCampus" FontSize="Medium" Title="Choose Campus" SelectedIndexChanged="pickerCampus_SelectedIndexChanged" HorizontalOptions="Center" VerticalOptions="Center">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>Lahti</x:String>
@@ -32,9 +43,27 @@
                                 </x:Array>
                             </Picker.ItemsSource>
                         </Picker>
+                        </Grid>
                         <Button x:Name="vibrationButton" Clicked="vibrationButton_Clicked" Text="Vibration is Off"></Button>
                     </StackLayout>
                 </ViewCell>
+
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="library.png" />
+                        <Label Text="left"
+                                 TextColor="#f35e20" />
+                        <Label Text="right fdgsdfgjkl sfdkghjlkfhdsgsdf"
+                               FontSize="Medium"
+                                 HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                                 TextColor="#503026" />
+                    </StackLayout>
+                </ViewCell>
+
+
+
             </TableSection>
 
 
@@ -47,6 +76,7 @@
                 <SwitchCell x:Name="maestroSwitch" AutomationId="maestroSwitch" Text="Maestro" />
                 <SwitchCell x:Name="amexSwitch" AutomationId="amexSwitch" Text="American Express" />
 
+              
            
 
                 <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
