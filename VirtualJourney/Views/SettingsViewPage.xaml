@@ -47,13 +47,14 @@
             <TableSection Title="Themes and Appearance">
                 <SwitchCell Text="Night Mode" x:Name="nightMode" OnChanged="nightMode_OnChanged" ></SwitchCell>
                 <SwitchCell Text="Choose your theme"></SwitchCell>
-
+                <ImageCell Text="Font Size" ImageSource="parking.png" />
 
             </TableSection>
             <TableSection Title="Notifications">
                 <SwitchCell  Text="Close All Notifications" />
                 <SwitchCell  Text="Disable course notifications" />
                 <SwitchCell Text="Disable only selected notifications." />
+                
             </TableSection>
 
             <TableSection Title="Reminders">
