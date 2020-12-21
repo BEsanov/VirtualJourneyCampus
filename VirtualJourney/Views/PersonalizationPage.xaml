@@ -127,17 +127,12 @@
                 <Image Grid.Row="0" Grid.Column="0" Source="SISU.png" >
                     <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
-                        <TapGestureRecognizer Tapped="OnImageNameTapped"
-                            NumberOfTapsRequired="2" />
-                        <DropGestureRecognizer AllowDrop="True"
-                                           Drop="OnCorrectDrop" />
                     </Image.GestureRecognizers>
                 </Image>
 
                 <Image Grid.Row="0" Grid.Column="1" Source="ltky_logo.png">
                     <Image.GestureRecognizers>
-                        <DropGestureRecognizer AllowDrop="True"
-                                           Drop="OnCorrectDrop" />
+                        <DragGestureRecognizer CanDrag="True"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="Hello"></Label>
@@ -154,21 +149,21 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Button Grid.Row="1" Grid.Column="0"  Text="Click me 6">
-                    <Button.GestureRecognizers>
+                <Image Grid.Row="1" Grid.Column="0"  Source="night_shelter.png">
+                    <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="1"  Text="Click me 5">
-                    <Button.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="1"  Source="location.png">
+                    <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="2"  Text="Click me 6">
-                    <Button.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="2"  Source="location.png">
+                    <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Image Grid.Row="1" Grid.Column="3" Source="SISU.png" x:Name="sisuLogo">
                     <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
@@ -178,12 +173,12 @@
                     </Image.GestureRecognizers>
              
                 </Image>
-                <Button Grid.Row="2" Grid.Column="0"  Text="Click me 6">
-                    <Button.GestureRecognizers>
+                <Image Grid.Row="2" Grid.Column="0"  Source="sports.png">
+                    <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
-                    </Button.GestureRecognizers>
-                </Button>
-                <Image Grid.Row="2" Grid.Column="1" Source="moodle.png">
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="1" Source="parking.png">
                     <Image.GestureRecognizers>
                         <DragGestureRecognizer CanDrag="True"/>
                     </Image.GestureRecognizers>
