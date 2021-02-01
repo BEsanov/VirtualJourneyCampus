@@ -55,8 +55,8 @@
 
             <TableSection Title="Reminders">
                 <SwitchCell OnColor="Red"  Text="Remind my course"></SwitchCell>
-                <SwitchCell Text="Remid me meeting"></SwitchCell>
-                <SwitchCell OnColor="Red" Text="Remid me exam"></SwitchCell>
+                <SwitchCell Text="Remid my meeting"></SwitchCell>
+                <SwitchCell OnColor="Red" Text="Remid my exam"></SwitchCell>
             </TableSection>
             <TableSection Title="Services">
                 <SwitchCell x:Name="silentMode" Text="Silent Mode" On="True" OnChanged="silentMode_OnChanged"></SwitchCell>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VirtualJourney.Views.NewsPage"
+             Title="News">
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+                <SearchBar Grid.Row="0" Grid.Column="0" Placeholder="News search" />
+
+            <ImageButton Source="viewlist.png" HorizontalOptions="End" x:Name="ShowNewsCategory" Clicked="ShowNewsCategory_Clicked"/>
+
+            <Button Text="Done" BackgroundColor="DarkGreen" Clicked="hideNewsCategory_Clicked"
+                  x:Name="hideNewsCategory" IsVisible="false" HorizontalOptions="Start" FontSize="Micro"></Button>
+
+
+
+            <Grid x:Name="newsCategoryGrid" IsVisible="false" >
+                <TableView Grid.Row="0" Grid.Column="0">
+                    <TableRoot>
+                        <TableSection>
+                            <SwitchCell Text="Covid-19" On="false" />
+                            <SwitchCell Text="Scholarships" On="false" />
+                            <SwitchCell Text="Student Union News" On="false" />
+                            <SwitchCell Text="Student Service News" On="false" />
+                            <SwitchCell Text="Lappeenranta Municipality" On="false" />
+                            <SwitchCell Text="Scientific Research" On="false" />
+                            <SwitchCell Text="Studies" On="false" />
+                            <SwitchCell Text="LUT Media" On="false" />
+                            <SwitchCell Text="LUT School of Engineering Science" On="false" />
+                            <SwitchCell Text="LUT School of Energy Systems" On="false" />
+                            <SwitchCell Text="LUT School of Business and Management" On="false" />
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </Grid>
+
+            <ScrollView>
+                <Grid Margin="5,5,5,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="6*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="https://www.helsinki.fi/sites/default/files/styles/12_7_medium/public/thumbnails/image/paavi_lab_cr.jpg"></Image>
+                    <Label Grid.Row="0" Grid.Column="1" FontSize="Small" Text=" It is now time to start reflecting what has happened and what is going to happen in the media industry because of the COVID-19 pandemic"></Label>
+
+                    <Image Grid.Row="1" Grid.Column="0" Source="https://www.lut.fi/documents/10633/86670/headerkuva-etusivu-lut-syksy-1400x654.jpg"></Image>
+                    <Label Grid.Row="1" Grid.Column="1" FontSize="Small" Text="Clean energy, water and air are life-giving resources for which we at LUT University seek new solutions with our expertise in technology and."></Label>
+
+                    <Image Grid.Row="2" Grid.Column="0" Source="https://www.lut.fi/documents/10633/162486/system-earth-618x618.jpg"></Image>
+                    <Label Grid.Row="2" Grid.Column="1" FontSize="Small" Text="Air – Turning emissions into opportunities. Defining air quality, emissions and climate impacts"></Label>
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

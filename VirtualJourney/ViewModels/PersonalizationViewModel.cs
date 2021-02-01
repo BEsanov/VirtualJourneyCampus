@@ -8,7 +8,7 @@ namespace VirtualJourney.ViewModels
     {
         public PersonalizationViewModel()
         {
-            Title = "Personalization"; //My App
+            Title = "Personalization NHS"; //My App
         }
     }
 }
